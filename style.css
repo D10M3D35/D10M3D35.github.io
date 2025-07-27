@@ -1,0 +1,457 @@
+/* Ancient Greek Black Figure Pottery Inspired CSS Theme */
+
+/* Import a classical font */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cinzel+Decorative:wght@400;700&display=swap');
+
+/* Root variables for consistent theming */
+:root {
+    --terracotta-base: #D2691E;
+    --terracotta-light: #E6A85C;
+    --cyan-eyes: #02fff2;
+    --terracotta-dark: #A0522D;
+    --black-figure: #1C1C1C;
+    --clay-red: #B8860B;
+    --ancient-gold: #DAA520;
+    --parchment: #F5F5DC;
+    --stone-gray: #696969;
+}
+
+/* Reset and base styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cinzel', serif;
+    background: linear-gradient(135deg, var(--terracotta-base) 0%, var(--terracotta-dark) 100%);
+    color: var(--black-figure);
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Add subtle pottery texture overlay */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(0,0,0,0.1) 1px, transparent 1px),
+        radial-gradient(circle at 75% 75%, rgba(0,0,0,0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel Decorative', serif;
+    color: var(--black-figure);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    border-bottom: 3px solid var(--black-figure);
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+/* Greek key pattern for h1 */
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--ancient-gold) 10%, 
+        var(--ancient-gold) 90%, 
+        transparent 100%);
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--clay-red);
+    border-left: 4px solid var(--black-figure);
+    padding-left: 1rem;
+    margin: 2rem 0 1rem 0;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--ancient-gold);
+}
+
+p {
+    margin-bottom: 1rem;
+    text-align: justify;
+    color: var(--black-figure);
+}
+
+/* Container and layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(245, 245, 220, 0.9);
+    border-radius: 10px;
+    box-shadow: 
+        0 0 20px rgba(0,0,0,0.3),
+        inset 0 0 20px rgba(210, 105, 30, 0.1);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+/* Greek key border pattern */
+.container::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 2px solid var(--black-figure);
+    background-image: 
+        repeating-linear-gradient(0deg, transparent, transparent 8px, var(--black-figure) 8px, var(--black-figure) 10px),
+        repeating-linear-gradient(90deg, transparent, transparent 8px, var(--black-figure) 8px, var(--black-figure) 10px);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 0;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+/* Navigation */
+nav {
+    background: var(--black-figure);
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0 2rem;
+}
+
+nav a {
+    color: var(--terracotta-light);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav a:hover {
+    background: var(--terracotta-base);
+    color: var(--black-figure);
+    transform: translateY(-2px);
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--ancient-gold);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    text-align: center;
+    padding: 0.75rem 1.5rem;
+    background: var(--black-figure);
+    color: var(--cyan-eyes);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid var(--black-figure);
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+}
+
+.btn:hover {
+    background: var(--terracotta-base);
+    color: var(--cyan-eyes);
+    border-color: var(--ancient-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-primary {
+    background: var(--clay-red);
+    border-color: var(--clay-red);
+}
+
+.btn-primary:hover {
+    background: var(--ancient-gold);
+    border-color: var(--ancient-gold);
+}
+
+/* Cards/Panels */
+.card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background: var(--parchment);
+    border: 2px solid var(--black-figure);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.card .btn {
+    margin-top: auto;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--terracotta-base), var(--ancient-gold), var(--clay-red));
+}
+
+/* Lists */
+ul, ol {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    color: var(--black-figure);
+}
+
+/* Links */
+a {
+    color: var(--clay-red);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--ancient-gold);
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    background: var(--parchment);
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--stone-gray);
+}
+
+th {
+    background: var(--black-figure);
+    color: var(--terracotta-light);
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background: rgba(210, 105, 30, 0.1);
+}
+
+/* Forms */
+input, textarea, select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid var(--stone-gray);
+    border-radius: 4px;
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    background: var(--parchment);
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--clay-red);
+    box-shadow: 0 0 5px rgba(184, 134, 11, 0.3);
+}
+
+/* Footer */
+footer {
+    background: var(--black-figure);
+    color: var(--terracotta-light);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+/* Decorative elements */
+.amphora-divider {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2rem;
+    color: var(--ancient-gold);
+}
+
+.amphora-divider::before,
+.amphora-divider::after {
+    content: '◦';
+    margin: 0 1rem;
+    color: var(--clay-red);
+}
+
+/* Responsive design */
+@media (max-width: 762px) {
+    .container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav li {
+        margin: 0.5rem 0;
+    }
+}
+/* Additional styles for landing page - add these to your existing style.css */
+
+/* Hero section */
+.hero-section {
+    text-align: center;
+    margin: 3rem 0;
+    padding: 3rem;
+    background: rgba(218, 165, 32, 0.1);
+    border-radius: 10px;
+    border: 1px solid var(--ancient-gold);
+}
+
+.hero-text {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--black-figure);
+    margin: 0;
+    line-height: 1.8;
+}
+
+/* Card grid layout */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.card h3 {
+    color: var(--black-figure);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--ancient-gold);
+    padding-bottom: 0.5rem;
+}
+
+.card p {
+    margin-bottom: 1.5rem;
+    color: var(--stone-gray);
+}
+
+/* Call to action section */
+.cta-section {
+    text-align: center;
+    background: var(--black-figure);
+    color: var(--parchment);
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    margin: 3rem 0;
+}
+
+.cta-section h2 {
+    color: var(--terracotta-light);
+    margin-bottom: 1rem;
+    border: none;
+    padding: 0;
+}
+
+.cta-section p {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: var(--parchment);
+}
+
+.cta-section .btn {
+    background: var(--ancient-gold);
+    color: var(--cyan-eyes);
+    border-color: var(--ancient-gold);
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+}
+
+.cta-section .btn:hover {
+    background: var(--terracotta-light);
+    border-color: var(--terracotta-light);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .hero-text {
+        font-size: 1.1rem;
+    }
+    
+    .cta-section {
+        padding: 2rem 1rem;
+    }
+}

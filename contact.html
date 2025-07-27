@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Diomedes</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="academic.html">Academic Writing</a></li>
+            <li><a href="fiction.html">Fiction Writing</a></li>
+            <li><a href="gamedev.html">Game Development</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Contact Me</h1>
+        
+        <div class="card">
+            <h2>Let's Work Together</h2>
+            <p>Whether you're looking for academic research, compelling fiction, innovative game narratives, or editorial services, I'm always interested in discussing new projects and collaborations.</p>
+            
+            <p>I work with publishers, game developers, academic institutions, and individual creators who value quality writing and thorough research.</p>
+        </div>
+
+        <div class="amphora-divider">⚱</div>
+
+        <div class="card-grid">
+            <div class="card">
+                <h3>Project Inquiries</h3>
+                <p>Ready to start a project? Let's discuss your vision, timeline, and how my expertise can bring your ideas to life.</p>
+                <p><strong>Response Time:</strong> Within 24 hours</p>
+            </div>
+
+            <div class="card">
+                <h3>Collaboration Opportunities</h3>
+                <p>Interested in long-term partnerships or ongoing projects? I'm always open to building lasting professional relationships.</p>
+                <p><strong>Availability:</strong> Actively seeking new collaborations</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Get In Touch</h2>
+            <form class="contact-form" action="https://forms.gle/ZVkf2uuZ44cBzuVN6" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="project-type">Project Type:</label>
+                    <select id="project-type" name="project-type" required>
+                        <option value="">Select a category</option>
+                        <option value="academic">Academic Writing</option>
+                        <option value="fiction">Fiction Writing</option>
+                        <option value="gamedev">Game Development</option>
+                        <option value="editing">Editing Services</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Tell me about your project, timeline, and any specific requirements..." required></textarea>
+                </div>
+
+                <!-- Honeypot field to prevent spam -->
+                <input type="text" name="_gotcha" style="display:none">
+
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+        <div class="amphora-divider">⚱</div>
+        <div class="card">
+            <h2>What to Expect</h2>
+            <p>When you reach out, I'll respond with questions about your project scope, timeline, and goals. I believe in clear communication from the start to ensure we're aligned on expectations and deliverables.</p>
+            
+            <p>All inquiries are treated with confidentiality, and I'm happy to sign NDAs for sensitive projects.</p>
+        </div>        
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Diomedes. All rights reserved.</p>
+    </footer>
+</body>
+</html>
